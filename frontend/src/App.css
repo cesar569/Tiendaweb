@@ -1,0 +1,102 @@
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+header {
+  background: #1f2937;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+main {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 18px;
+  color: #666;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.producto {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.producto h3 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.producto p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.producto button {
+  margin-top: 12px;
+}
+
+main h2 {
+  color: #1f2937;
+}
+
+@media (max-width: 800px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
