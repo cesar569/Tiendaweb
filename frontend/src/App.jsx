@@ -14,8 +14,7 @@ import axios from "axios"
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/productos")
-      .then((respuesta) => {
+      axios.get("https://tiendaweb-et4b.onrender.com/api/productos")      .then((respuesta) => {
         setProductos(respuesta.data)
       })
       .catch((error) => {
@@ -153,9 +152,8 @@ import axios from "axios"
       .reduce((total, producto) => total + producto.precio, 0)
 
     try {
-      const respuesta = await axios.post(
-        "http://localhost:3000/api/pedidos",
-        {
+      const respuesta = await axios.post("https://tiendaweb-et4b.onrender.com/api/pedidos", {
+        
           nombre,
           direccion,
           telefono,
