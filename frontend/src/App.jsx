@@ -14,8 +14,8 @@ import axios from "axios"
 
   useEffect(() => {
   
-      axios.get("https://tiendaweb-et4b.onrender.com/api/productos")      
-       .then((respuesta) => {
+
+      axios.get("https://tiendaweb-et4b.onrender.com/api/productos")      .then((respuesta) => {
         setProductos(respuesta.data)
       })
       .catch((error) => {
