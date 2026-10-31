@@ -1,8 +1,9 @@
+
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 3000;  
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -38,6 +39,7 @@ app.get("/api/productos", (req, res) => {
     }
   ]);
 });
+
 app.post("/api/pedidos", (req, res) => {
   const { nombre, direccion, telefono, productos, total } = req.body;
 
@@ -65,6 +67,14 @@ app.post("/api/pedidos", (req, res) => {
     total
   });
 });
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Backend de TiendaWeb ejecutándose en http://localhost:${PORT}`);
-});
+
+// Permite probar Express sin iniciar el servidor
+if (require.main === module) {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(
+      `Backend de TiendaWeb ejecutándose en http://localhost:${PORT}`
+    );
+  });
+}
+
+module.exports = app;

@@ -2,3 +2,14 @@
 frontend.zip
 
 /frontend.zip
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de entorno
+.env
+.env.*
+!.env.example
+
+# Resultados de pruebas
+coverage/
